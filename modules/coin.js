@@ -73,9 +73,16 @@ function countFlips(array) {
       heads  += heads;
     }
   }
-  const k = {tails:tails, heads: heads};
 
-  return k;
+  if (heads != 0 && tails != 0) {
+    return {tails: tails, heads: heads};
+  } else if (heads == 0 && tails != 0) {
+    return {tails: tails};
+  } else if (heads != 0 && tails == 0) {
+    return {heads: heads};
+  } else {
+    return {};
+  }
 
 }
 
