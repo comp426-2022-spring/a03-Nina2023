@@ -98,12 +98,14 @@ function coinFlips(flips) {
 
  function flipACoin(call) {
   var coin = coinFlip();
+  
   if (call == coin) {
-    var result = "win";
+    return {call: call, flip: coin, result: "win"};
   } else {
-    var result = "lose";
+    
+    return {call: call, flip: coin, result: "lose"};
   }
-  return {call: call, flip: coin, result: result};
+ 
 }
 
 
