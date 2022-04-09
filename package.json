@@ -1,0 +1,23 @@
+{
+  "name": "a03-nina2023",
+  "version": "1.0.0",
+  "description": "API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comp426-2022-spring/a03-Nina2023.git"
+  },
+  "author": "Nina Sehgal",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/comp426-2022-spring/a03-Nina2023/issues"
+  },
+  "homepage": "https://github.com/comp426-2022-spring/a03-Nina2023#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "minimist": "^1.2.6"
+  }
+}
