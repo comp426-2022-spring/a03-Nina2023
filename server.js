@@ -25,8 +25,8 @@ app.get('/app/', (req, res) => {
 
 
 app.get('/app/flips/:number', (req, res) => {
-    const f = coin_functions.coinFlips(req.params.number)
-    res.status(200).json({raw: f, summary: coin_functions.countFlips(flips)})
+    const flips = coin.coinFlips(req.params.number)
+    res.status(200).json({raw: flips, summary: coin.countFlips(flips)})
 })
 
 app.get('/app/flip/call/tails', (req, res) => {
@@ -35,8 +35,8 @@ app.get('/app/flip/call/tails', (req, res) => {
 })
 
 app.get('/app/flip/call/heads', (req, res) => {
-    const r = coin_functions.flipACoin("heads")
-    res.status(200).json({call: r.call, flip: r.flip, result: r.result})
+    const result = coin.flipACoin("heads")
+    res.status(200).json({call: result.call, flip: result.flip, result: result.result})
 })
 
 app.get('/app/flip/', (req, res) => {
