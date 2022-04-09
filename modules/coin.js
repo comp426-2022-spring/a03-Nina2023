@@ -104,7 +104,7 @@ function flipACoin(call) {
 }
 
 
-export {coinFlip, coinFlips, countFlips, flipACoin}
+module.exports = {coinFlip, coinFlips, countFlips, flipACoin}
 
 /** Export 
  * 
