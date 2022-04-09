@@ -25,9 +25,11 @@ app.get('/app/', (req, res) => {
 
 
 app.get('/app/flips/:number', (req, res) => {
-    const flips = coin.coinFlips(req.params.number)
-    res.status(200).json({raw: flips, summary: coin_functions.countFlips(flips)})
-})
+    const raw = coin_functions.coinFlips(req.params.number)
+    const summary = coin_functions.countFlips(raw);
+    res.status(200).json({raw, summary});
+    res.type("text/plain")
+});
 
 app.get('/app/flip/call/tails', (req, res) => {
     const r = coin_functions.flipACoin("tails")
